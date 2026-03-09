@@ -1,0 +1,18 @@
+{
+  "task_id": "002",
+  "task_description": "Create a modern landing page for a UK Solar Panel company",
+  "project_path": "./solar_uk",
+  "required_files": ["index.html", "styles.css"],
+  "must_contain_checks": [
+    {
+      "file": "index.html",
+      "text": "Solar"
+    },
+    {
+      "file": "index.html",
+      "text": "UK"
+    }
+  ],
+  "expected_outputs": ["A beautiful HTML/CSS landing page"],
+  "proof_required": ["index.html"]
+}

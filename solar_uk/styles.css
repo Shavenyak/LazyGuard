@@ -1,0 +1,177 @@
+:root {
+    --primary: #FFD700;
+    --primary-dark: #ccac00;
+    --secondary: #1a365d;
+    --bg: #0a0e17;
+    --text: #ffffff;
+    --text-muted: #a0aec0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--primary);
+    margin-left: 2px;
+}
+
+nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--text);
+}
+
+.nav-cta {
+    background: var(--primary);
+    color: var(--secondary) !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 10%;
+    background: radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 40%);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--primary);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin-bottom: 3rem;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.cta-btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.primary {
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+.primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.solar-panel-graphic {
+    width: 400px;
+    height: 500px;
+    background: linear-gradient(135deg, #2d3748, #1a202c);
+    border-radius: 20px;
+    transform: perspective(1000px) rotateY(-20deg) rotateX(10deg);
+    box-shadow: -20px 40px 60px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.solar-panel-graphic::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(90deg, transparent, transparent 38px, rgba(255,255,255,0.05) 40px),
+                repeating-linear-gradient(0deg, transparent, transparent 38px, rgba(255,255,255,0.05) 40px);
+    border-radius: 20px;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        padding-top: 15rem;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .hero-btns {
+        justify-content: center;
+    }
+    .hero-image {
+        display: none;
+    }
+}
