@@ -1,18 +1,15 @@
 {
-  "task_id": "002",
-  "task_description": "Create a modern landing page for a UK Solar Panel company",
-  "project_path": "./solar_uk",
-  "required_files": ["index.html", "styles.css"],
+  "task_id": "EXAMPLE-001",
+  "task_description": "Add a descriptive title to the homepage",
+  "project_path": "./target_project",
+  "required_files": ["index.html"],
   "must_contain_checks": [
     {
       "file": "index.html",
-      "text": "Solar"
-    },
-    {
-      "file": "index.html",
-      "text": "UK"
+      "text": "My Awesome App"
     }
   ],
-  "expected_outputs": ["A beautiful HTML/CSS landing page"],
-  "proof_required": ["index.html"]
+  "test_command": "npm test",
+  "expected_outputs": ["tests must pass"],
+  "proof_required": ["test_output"]
 }
